@@ -1,0 +1,658 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+:root {
+    /* Primary colors */
+    --primary-color: #9e68fb;  /* Brand color */
+    --grid-color: #eff2ff;       
+    --secondary-color: #ffffff; /* Navbar background */
+    --text-color: #ffffff; /* Main text color */
+    --overlay-color: rgba(0, 0, 0, 0.6); /* Overlay color */
+
+    /* Button colors */; /* Brand color */
+    --button-bg: #9e68fb;;
+    --button-text: #ffffff;
+
+    /* Accent colors */
+    --hover-color: #9e68fb;             /* Hover color for items */
+}
+
+/* Global styles */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Hero section styling */
+.hero-section {
+    font-family: 'Poppins', sans-serif;
+    background-image: url('hero.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 90vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+/* Dark overlay for background */
+/* .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--overlay-color);
+    z-index: 1;
+} */
+
+/* Hero text content */
+.heroinfo {
+    position: relative;
+    z-index: 2;
+    color: var(--text-color);
+    width: 40rem;
+    text-align: start;
+    padding: 2rem;
+    gap: 10px;
+    margin: 14rem;
+}
+
+/* Logo styling */
+.logo {
+    height: 70px;
+    width: 120px;
+    cursor: pointer;
+}
+
+/* Navbar styling */
+.navbar {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    background-color: var(--secondary-color);
+    display: flex;
+    color: var(--primary-color);
+    position: relative;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem;
+    z-index: 3;
+}
+
+/* Navbar item styling */
+.nav-items {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.item {
+    border: 3px;
+    transition: transform 0.2s ease;
+}
+
+.button1{
+    font-size: 2.5rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px 0px;
+    padding: 14px 25px;
+    border: none;
+    border-radius:1cqh;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.button1:hover{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    transform: scale(1.1);
+}
+
+.item:hover {
+    color: var(--hover-color);
+    text-decoration: underline var(--primary-color);
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.heroinfo h1 {
+    font-size: 3.6rem;
+    font-weight: bolder;
+    color: var(--primary-color);
+    line-height: 130%;
+}
+
+.heroinfo h4 {
+    font-size: 1.2rem;
+    font-weight: bolder;
+    color: var(--button-bg);
+}
+.heroinfo p {
+    color: black;
+}
+
+.heroinfo button {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin: 15px 0px;
+    padding: 16px 50px;
+    border: none;
+    border-radius:1cqh;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Smooth transition for scaling */
+}
+
+.heroinfo button:hover {
+    background-color: var(--hover-color);
+    color: var(--secondary-color);
+    transform: scale(1.1); /* Scale up to 110% of the original size */
+}
+
+
+/* Service Section */
+
+.heading{
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 2.5rem 2.5rem;
+    padding: 2rem;
+}
+.heading h1{
+    color: var(--primary-color);
+    font-size: 3rem;
+}
+.grid-item img{
+    height: 60px;
+    width: 60px;
+}
+.grid-item{
+    height: 30vh;
+    width: 22vw;
+    margin: 1rem 1rem;
+    padding: 1rem;
+    border: 2px solid var(--primary-color);
+    border-radius: 2cqh;
+    background-color: var(--grid-color);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.grid {
+    font-family: 'Poppins', sans-serif;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    gap: 10px;
+    margin: 1rem auto;
+    max-width: 1200px;
+}
+
+.grid-item:hover{
+    transform: scale(1.1);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.protfolio{
+    background-color: #EFF2FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.gridportfolio{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: center;
+    gap: 10px;
+    margin: 1rem auto;
+    max-width: 1200px;
+}
+.port-item:hover{
+    transition: transform 0.3s ease, box-shadow 0.4s ease;
+    transform: scale(1.1);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.protfolio-button{
+    font-size: 2.5rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px 0px;
+    padding: 14px 25px;
+    border: none;
+    border-radius:1cqh;
+    background-color: var(--button-bg);
+    color: var(--button-text);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+.protfolio-button:hover{
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    transform: scale(1.1);
+}
+
+.client{
+    height: auto;
+    border-radius: 3cqh;
+}
+
+
+.testimonials{
+    font-family: 'Poppins';
+    margin: 6.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.review{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 3rem;
+}
+
+.testimonials h2{
+    font-size: 1.8rem;
+    color: var(--primary-color);
+}
+.testimonials p{
+    font-size: 1rem;
+    margin: 1.5rem 0rem;
+}
+.testimonials img{
+    border-radius: 50%;
+    margin: 0;
+}
+
+
+
+
+/* From ChatGpt */
+/* Mobile devices (up to 600px wide) */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-items {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-section {
+        height: auto;
+        padding: 2rem;
+        text-align: center;
+    }
+
+    .heroinfo {
+        width: 100%;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    .heroinfo h1 {
+        font-size: 2.5rem;
+    }
+
+    .heroinfo h4 {
+        font-size: 1rem;
+    }
+
+    .button1,
+    .heroinfo button {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .grid-item {
+        width: 90%;
+    }
+
+    .gridportfolio {
+        grid-template-columns: 1fr;
+    }
+
+    .protfolio-button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .testimonials {
+        margin: 2rem;
+    }
+}
+
+/* Tablets (601px to 900px wide) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-items {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 0.5rem;
+    }
+
+    .hero-section {
+        height: auto;
+        text-align: center;
+    }
+
+    .heroinfo {
+        width: 90%;
+        padding: 1rem;
+        margin: 2rem auto;
+    }
+
+    .heroinfo h1 {
+        font-size: 3rem;
+    }
+
+    .heroinfo h4 {
+        font-size: 1.1rem;
+    }
+
+    .button1,
+    .heroinfo button {
+        font-size: 1rem;
+        padding: 12px 30px;
+    }
+
+    .grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .grid-item {
+        width: 85%;
+    }
+
+    .gridportfolio {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .protfolio-button {
+        font-size: 1.2rem;
+        padding: 12px 25px;
+    }
+
+    .testimonials {
+        margin: 4rem;
+    }
+}
+
+/* Large Tablets and small laptops (901px to 1200px wide) */
+@media (min-width: 901px) and (max-width: 1200px) {
+    .navbar {
+        padding: 1.5rem;
+    }
+
+    .hero-section {
+        height: 80vh;
+    }
+
+    .heroinfo {
+        width: 80%;
+        margin: 3rem;
+    }
+
+    .heroinfo h1 {
+        font-size: 3.2rem;
+    }
+
+    .heroinfo h4 {
+        font-size: 1.2rem;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .grid-item {
+        width: 40vw;
+    }
+
+    .gridportfolio {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .protfolio-button {
+        font-size: 1.2rem;
+        padding: 12px 30px;
+    }
+
+    .testimonials {
+        margin: 4rem;
+    }
+}
+
+
+/* Extra small mobile devices (up to 400px wide) */
+@media (max-width: 400px) {
+    /* Navbar adjustments */
+    .navbar {
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .nav-items {
+        flex-direction: column;
+        gap: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* Hero section adjustments */
+    .hero-section {
+        height: auto;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .heroinfo {
+        width: 100%;
+        margin: 1rem auto;
+        padding: 0.5rem;
+    }
+
+    .heroinfo h1 {
+        font-size: 2rem;
+        line-height: 110%;
+    }
+
+    .heroinfo h4 {
+        font-size: 0.9rem;
+    }
+
+    .heroinfo p {
+        font-size: 0.85rem;
+    }
+
+    .heroinfo button,
+    .button1 {
+        font-size: 0.9rem;
+        padding: 8px 18px;
+    }
+
+    /* Services Section */
+    .heading h1 {
+        font-size: 1.8rem;
+    }
+
+    .heading p {
+        font-size: 0.9rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .grid-item {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .grid-item h3 {
+        font-size: 1rem;
+    }
+
+    .grid-item p {
+        font-size: 0.8rem;
+    }
+
+    /* Portfolio Section */
+    .protfolio-button {
+        font-size: 1rem;
+        padding: 10px 18px;
+    }
+
+    .gridportfolio {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .port-item img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Testimonials Section */
+    .testimonials {
+        margin: 2rem;
+    }
+
+    .testimonials h2 {
+        font-size: 1.2rem;
+    }
+
+    .testimonials p {
+        font-size: 0.9rem;
+    }
+
+    .review img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .review .name {
+        font-size: 0.9rem;
+    }
+}
+
+/* Small mobile devices (up to 600px wide) */
+@media (max-width: 600px) {
+    /* Adjustments for headings, buttons, and text sizes */
+    .navbar {
+        padding: 0.5rem;
+    }
+
+    .hero-section {
+        padding: 1rem;
+        height: auto;
+    }
+
+    .heroinfo h1 {
+        font-size: 2.4rem;
+    }
+
+    .heroinfo h4 {
+        font-size: 1rem;
+    }
+
+    .heroinfo p {
+        font-size: 0.9rem;
+    }
+
+    .button1,
+    .heroinfo button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+    .heading h1 {
+        font-size: 2.2rem;
+    }
+
+    .heading p {
+        font-size: 0.9rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .grid-item {
+        width: 85%;
+        padding: 0.8rem;
+    }
+
+    .grid-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .grid-item p {
+        font-size: 0.85rem;
+    }
+
+    .protfolio-button {
+        font-size: 1rem;
+        padding: 12px 25px;
+    }
+
+    .gridportfolio {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .testimonials {
+        margin: 2.5rem;
+    }
+
+    .testimonials h2 {
+        font-size: 1.5rem;
+    }
+
+    .testimonials p {
+        font-size: 1rem;
+    }
+
+    .review img {
+        width: 70px;
+        height: 70px;
+    }
+}
